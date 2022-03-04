@@ -6,14 +6,17 @@ import useStyles from '../Utils/styles'
 
 type Props = {
     children: JSX.Element
+    title?: string
+    description?: string
 }
 
-const Layout: React.FC<Props> = ({ children }) => {
+const Layout: React.FC<Props> = ({ children, title, description }) => {
     const classes = useStyles();
     return (
         <div>
             <Head>
-                <title>Next Amazonas</title>
+                <title>{title ? `${title} | Next Amazona` : "Next Amazona"}</title>
+                {description && <meta name="description" content={description} />}
             </Head>
             <AppBar position='static' className={classes.navbar}>
                 <Toolbar>

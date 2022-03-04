@@ -16,7 +16,14 @@ const useStyles = makeStyles({
         flexGrow: 1
     },
     main: { minHeight: '80vh' },
-    footer: { textAlign: 'center' }
+    footer: {
+        marginTop: 10,
+        textAlign: 'center'
+    },
+    section: {
+        marginTop: 10,
+        marginBottom: 10
+    }
 })
 
 export default useStyles
